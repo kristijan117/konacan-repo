@@ -2,7 +2,7 @@ import express from 'express';
 import connect from './db.js';
 import cors from 'cors';
 import mongo from 'mongodb';
-import auth from './auth';
+import auth from './auth.js';
 import jwt from 'jsonwebtoken';
 require('dotenv').config();
 
