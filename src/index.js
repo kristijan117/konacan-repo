@@ -1,12 +1,11 @@
-import dotenv from 'dotenv'
-dotenv.config();
-
 import express from 'express';
 import connect from './db.js';
 import cors from 'cors';
 import mongo from 'mongodb';
 import auth from './auth';
 import jwt from 'jsonwebtoken';
+require('dotenv').config();
+
 let Cart = require ('./cartLogic');
 if(process.env.NODE_ENV === 'production'){
     app.use(express.static(__dirname + '/../public/'));
