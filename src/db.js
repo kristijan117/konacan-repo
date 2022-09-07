@@ -1,8 +1,8 @@
 
-const { MongoClient } = require('mongodb');
+import mongo from mongodb
 let connection_string= 'mongodb+srv://alkoshop:admin@cluster0.iclwo.mongodb.net/?retryWrites=true&w=majority'
 
-let client = new MongoClient(connection_string, {
+let client = new mongo.MongoClient(connection_string, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
