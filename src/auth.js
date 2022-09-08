@@ -6,10 +6,10 @@ let jwt = require('jsonwebtoken');
 (async () => {
     let db = await connect();
     await db.collection('korisnik').createIndex({ Email: 1 }, { unique: true });
-})();
+})()
 
-export default {
-    async registerUser(user) {
+//export default {
+(async() => { registerUser(user) 
         let db = await connect();
 
         let doc = {
@@ -27,9 +27,9 @@ export default {
                 throw new Error('Korisnik već postoji');
             }
         }
-    },
+    }),
 
-    async authenticateUser(Email, Lozinka) {
+    (async() => { authenticateUser(Email, Lozinka) 
         let db = await connect();
         let userData = await db.collection('korisnik').findOne({ Email: Email })
         
@@ -49,8 +49,8 @@ export default {
         else {
             throw new Error('Cannot authenticate')
         }
-    },
-    async verify(req, res, next) {
+    }),
+    (async() => { verify(req, res, next) 
         try {
             let authorization = await req.headers.authorization.split(' ');
             let type = authorization[0];
@@ -67,6 +67,6 @@ export default {
         catch (e) {
             return res.status(401).send();
         }
-    }
+    })
 
-}
+//}
