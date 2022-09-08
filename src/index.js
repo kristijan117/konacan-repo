@@ -4,12 +4,12 @@ import cors from 'cors';
 import mongo from 'mongodb';
 import auth from './auth.js';
 import jwt from 'jsonwebtoken';
-import Cart from "./cartLogic.js"
+
 import dotenv from "dotenv";
 dotenv.config()
 
 
-//let Cart = require ('./cartLogic');
+let Cart = require ('./cartLogic.js');
 if(process.env.NODE_ENV === 'production'){
     app.use(express.static(__dirname + '/../public/'));
 }
