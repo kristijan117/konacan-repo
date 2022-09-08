@@ -7,6 +7,8 @@ import jwt from 'jsonwebtoken';
 
 import dotenv from "dotenv";
 dotenv.config()
+import { createRequire } from "module";
+const require = createRequire(import.meta.url);
 
 
 let Cart = require ('./cartLogic.js');
