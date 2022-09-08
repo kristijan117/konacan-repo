@@ -8,7 +8,7 @@ let client = new mongo.MongoClient(connection_string, {
 });
 let db = null
 
-export default () => {
+//export default () => {
     return new Promise((resolve, reject) =>{
 
         if (db){
@@ -25,4 +25,4 @@ export default () => {
             }
         })
     })
-}
+//}
