@@ -12,10 +12,11 @@ dotenv.config()
 
 
 let Cart = require ('./cartLogic.js');
+
+const app = express() 
 if(process.env.NODE_ENV === 'production'){
     app.use(express.static(__dirname + '/../public/'));
 }
-const app = express() 
 const port = 3007 || process.env.PORT  
 app.use(express.json());
 
