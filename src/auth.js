@@ -1,7 +1,7 @@
-import mongo from 'mongodb';
-import connect from './db.js';
-import bcrypt from 'bcrypt';
-import jwt from 'jsonwebtoken';
+let mongo = require('mongodb');
+let connect = require('./db.js');
+let bcrypt = require('bcrypt');
+let jwt = require('jsonwebtoken');
 
 (async () => {
     let db = await connect();

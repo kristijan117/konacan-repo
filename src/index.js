@@ -1,14 +1,14 @@
-import express from 'express';
-import connect from './db.js';
-import cors from 'cors';
-import mongo from 'mongodb';
-import auth from './auth.js';
-import jwt from 'jsonwebtoken';
+let express = require('express');
+let connect = require('./db.js');
+let cors = require('cors');
+let mongo = require ('mongodb');
+let auth = require('./auth.js');
+let jwt = require('jsonwebtoken');
 
-import dotenv from "dotenv";
+let dotenv = require("dotenv");
 dotenv.config()
-import { createRequire } from "module";
-const require = createRequire(import.meta.url);
+//import { createRequire } from "module";
+//const require = createRequire(import.meta.url);
 
 
 let Cart = require ('./cartLogic.js');

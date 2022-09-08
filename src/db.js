@@ -1,5 +1,5 @@
 
-import mongo from "mongodb"
+let mongo = require("mongodb");
 let connection_string= 'mongodb+srv://alkoshop:admin@cluster0.iclwo.mongodb.net/?retryWrites=true&w=majority'
 
 let client = new mongo.MongoClient(connection_string, {
