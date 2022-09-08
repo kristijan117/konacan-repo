@@ -9,7 +9,7 @@ let jwt = require('jsonwebtoken');
 })()
 
 //export default {
-(async() => { registerUser(user) 
+    async function registerUser(user) {
         let db = await connect();
 
         let doc = {
@@ -27,9 +27,9 @@ let jwt = require('jsonwebtoken');
                 throw new Error('Korisnik već postoji');
             }
         }
-    }),
+    }
 
-    (async() => { authenticateUser(Email, Lozinka) 
+    async function authenticateUser(Email, Lozinka) {
         let db = await connect();
         let userData = await db.collection('korisnik').findOne({ Email: Email })
         
@@ -49,8 +49,8 @@ let jwt = require('jsonwebtoken');
         else {
             throw new Error('Cannot authenticate')
         }
-    }),
-    (async() => { verify(req, res, next) 
+    }
+    async function verify(req, res, next) {
         try {
             let authorization = await req.headers.authorization.split(' ');
             let type = authorization[0];
@@ -67,6 +67,6 @@ let jwt = require('jsonwebtoken');
         catch (e) {
             return res.status(401).send();
         }
-    })
+    }
 
 //}
