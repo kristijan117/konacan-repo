@@ -4,7 +4,9 @@ import cors from 'cors';
 import mongo from 'mongodb';
 import auth from './auth.js';
 import jwt from 'jsonwebtoken';
-require('dotenv').config();
+import dotenv from "dotenv";
+dotenv.config()
+
 
 let Cart = require ('./cartLogic');
 if(process.env.NODE_ENV === 'production'){
